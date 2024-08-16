@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Books</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+        h1 { color: #333; }
+        .book { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+        .book img { max-width: 100px; float: left; margin-right: 15px; }
+        .book-info { overflow: hidden; }
+    </style>
+</head>
+<body>
+    <h1>Library Books</h1>
+    {% for book in books %}
+        <div class="book">
+            <img src="{{ book['image_url'] }}" alt="{{ book['title'] }} cover">
+            <div class="book-info">
+                <h2>{{ book['title'] }}</h2>
+                <p><strong>Author:</strong> {{ book['author'] }}</p>
+                <p><strong>Genre:</strong> {{ book['genre'] }}</p>
+                <p><strong>Year:</strong> {{ book['publication_year'] }}</p>
+                <p><strong>ISBN:</strong> {{ book['isbn'] }}</p>
+                <p><strong>Available Copies:</strong> {{ book['available_copies'] }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</body>
+</html>
