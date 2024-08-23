@@ -10,9 +10,40 @@
         .book { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
         .book img { max-width: 100px; float: left; margin-right: 15px; }
         .book-info { overflow: hidden; }
+
+        /* Стили для меню */
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
     </style>
 </head>
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li> 
+            <li><a href="#">Login</a></li> 
+        </ul>
+    </nav>
+
     <h1>Library Books</h1>
     {% for book in books %}
         <div class="book">
